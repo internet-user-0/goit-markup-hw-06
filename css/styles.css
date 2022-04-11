@@ -313,6 +313,17 @@ border-radius: 4px;
    display: inline-flex;
    justify-content: center;
    align-items: center;
+
+   transition-property: fill;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover,
+.modal-btn:focus{
+   fill: #2196F3;
+}
+.modal-btn:focus-visible{
+   outline: 1px solid rgba(0, 0, 0, 0);
 }
 
 .icon-x{
@@ -376,8 +387,16 @@ padding-left: 42px;
 cursor: pointer;
 }
 
-
-.form-input:focus{
+.form-input{
+   transition-property: border;
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus-visible{
+   outline: 0px solid ;
+}
+.form-input:focus,
+.form-input:hover{
    border: 1px solid #2196F3;
 }
 
@@ -479,6 +498,10 @@ position: absolute;
 left: 0;
 top: 3px;
 transform: translate(-50% -50%);
+
+transition-property: background-color, border;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-svg{
@@ -487,8 +510,8 @@ height: 15px;
 }
 
 .check-condition:checked + .check-icon{
-   background-color: #2196f3;
-   border: 2px solid #2196f3;
+   background-color: var(--background-btn-hover);
+   border: 2px solid var(--background-btn-hover);
    background-origin: border-box;
 }
 
