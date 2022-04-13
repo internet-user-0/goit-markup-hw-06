@@ -357,7 +357,9 @@ margin-bottom: 12px;
 }
 
 
-
+.modal-form-list{
+   margin-bottom: 20px;
+}
 
 
 .form-list-item label{
@@ -369,11 +371,17 @@ letter-spacing: 0.01em;
 
 color: var(--color-text-two);
 
+margin-bottom: 4px;
+display: inline-block;
 }
-.form-list-item input{
+.form-list-item:not(:last-child){
+   margin-bottom: 10px;
+}
+
+
+.form-input{
    text-decoration: none;
    display: block;
-   margin-bottom: 10px;
 
    border: 1px solid rgba(33, 33, 33, 0.2);
    box-sizing: border-box;
@@ -385,13 +393,13 @@ color: var(--color-text-two);
 padding-left: 42px;
 
 cursor: pointer;
+
+transition-property: border;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.form-input{
-   transition-property: border;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 .form-input:focus-visible{
    outline: 0px solid ;
 }
@@ -423,7 +431,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .form-list-item textarea{
    display: block;
-   margin-bottom: 10px;
 
    font-style: normal;
    font-weight: 400;
@@ -440,8 +447,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
    resize: none;
    padding: 12px 16px;
-
-   margin-bottom: 20px;
 
    border: 1px solid rgba(33, 33, 33, 0.2);
    box-sizing: border-box;
@@ -470,6 +475,9 @@ color: rgba(117, 117, 117, 0.5);
    margin-bottom: 30px;
 }
 .check-txt{
+   display: flex;
+   align-items: center;
+
    font-style: normal;
 font-weight: 400;
 font-size: 14px;
@@ -477,14 +485,10 @@ line-height: 24px;
 letter-spacing: 0.03em;
 
 color: #757575;
-
-margin-left: auto;
-margin-right: auto;
 }
 
 .check-condition{
    appearance: none;
-   position: absolute;
 }
 
 .check-condition-link{
@@ -501,10 +505,7 @@ height: 15px;
 border: 2px solid #212121;
 border-radius: 2px;
 
-position: absolute;
-left: 10px;
-top: 3px;
-transform: translateX(-50%);
+margin-right: 8px;
 
 transition-property: background-color, border;
 transition-duration: 250ms;
@@ -842,6 +843,10 @@ margin-right: 30px;
    align-items: baseline;
 }
 
+.footer-item-grow{
+   flex-grow: 1;
+}
+
 .address{
    margin-top: 20px;
    display: flex;
@@ -973,7 +978,7 @@ color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-form-btn{
-position: relative;
+display: inline-flex;
 align-items: center;
 justify-content: center;
 
@@ -1000,14 +1005,11 @@ border: none;
 
 .btn-svg{
    display: flex;
-   right: 28px;
-   bottom: 13px;
-   transform: translate(25%);
+
+   margin-left: 10px;
 
    width: 24px;
    height: 24px;
-
-   position: absolute;
 }
 
 
